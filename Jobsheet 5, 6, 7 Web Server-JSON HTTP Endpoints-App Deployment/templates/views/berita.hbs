@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/img/berita.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/berita.css">
+</head>
+<body>
+  <div class="main-content">
+    {{>header}}
+
+    <section class="berita-container">
+      <h1 class="berita-title">📰 Berita Terkini</h1>
+      <p class="berita-subtitle">Kumpulan berita terbaru dari berbagai sumber terpercaya.</p>
+
+      {{#if error}}
+        <div class="error-box">
+          <p>{{error}}</p>
+        </div>
+      {{else}}
+        <div class="berita-grid">
+          {{#each berita}}
+            <div class="berita-card">
+              <div class="image-wrapper">
+                {{#if this.image}}
+                  <img src="{{this.image}}" alt="Gambar Berita" class="berita-image">
+                {{else}}
+                  <img src="https://via.placeholder.com/400x250?text=No+Image" alt="Tidak ada gambar" class="berita-image">
+                {{/if}}
+              </div>
+              <div class="berita-body">
+                <a href="{{this.url}}" target="_blank" class="berita-judul">{{this.title}}</a>
+                <p class="berita-meta"><strong>{{this.source}}</strong> — {{this.published_at}}</p>
+                <p class="berita-deskripsi">{{this.description}}</p>
+                <a href="{{this.url}}" target="_blank" class="btn-readmore">Baca Selengkapnya</a>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      {{/if}}
+    </section>
+
+    {{>footer}}
+  </div>
+</body>
+</html>

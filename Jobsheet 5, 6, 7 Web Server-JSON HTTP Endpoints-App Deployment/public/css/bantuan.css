@@ -1,0 +1,166 @@
+/* ===== Tampilan Halaman Bantuan Modern ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(to bottom right, #e3f2fd, #f8fbff);
+    color: #333;
+  }
+  
+  /* Header umum */
+  header {
+    background: #04364A;
+    padding: 15px 0;
+    text-align: center;
+  }
+  
+  header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  header a:hover {
+    color: #FFD700;
+  }
+  
+  .faq-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px 40px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .faq-title {
+    font-size: 2.4rem;
+    text-align: center;
+    color: #04364A;
+    margin-bottom: 10px;
+  }
+  
+  .faq-subtitle {
+    text-align: center;
+    color: #555;
+    margin-bottom: 40px;
+    font-size: 1rem;
+  }
+  
+  .faq-card {
+    background: linear-gradient(to right, #f7faff, #e8f0fe);
+    border-radius: 14px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 6px solid #2FA4D9;
+  }
+  
+  .faq-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to right, #ecf5ff, #f4faff);
+  }
+  
+  .faq-card h2 {
+    color: #04364A;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .faq-card i {
+    color: #2FA4D9;
+    font-size: 1.2rem;
+  }
+  
+  .faq-card p {
+    line-height: 1.7;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .api-points {
+    margin-top: 10px;
+    padding-left: 25px;
+    color: #333;
+  }
+  
+  .api-points li {
+    margin-bottom: 5px;
+  }
+  
+  /* Diagram Box */
+  .diagram-box {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .diagram {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .diagram:hover {
+    transform: scale(1.05);
+  }
+  
+  .diagram-caption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+    font-style: italic;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background: #04364A;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  /* Animasi */
+  .fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsif */
+  @media (max-width: 768px) {
+    .faq-container {
+      padding: 20px;
+    }
+  
+    .faq-title {
+      font-size: 2rem;
+    }
+  
+    .faq-card h2 {
+      font-size: 1.1rem;
+    }
+  
+    .diagram {
+      width: 95%;
+    }
+  }
+  

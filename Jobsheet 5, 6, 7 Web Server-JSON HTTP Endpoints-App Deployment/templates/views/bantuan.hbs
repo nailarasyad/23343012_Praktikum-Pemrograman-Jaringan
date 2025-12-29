@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bantuan - Aplikasi Pribadi</title>
+    <link rel="stylesheet" href="/css/bantuan.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-2Y7KIXH+6fZDCbqgdxp5L6Q5C7t7L0Mzrjv1s7e8U6Zq9DTRaZDb7PYgcqj52l1Zy3jFTImzUBcdAcVv3yW7VQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    {{>header}}
+
+    <main class="main-content fade-in">
+      <section class="faq-container">
+        <h1 class="faq-title">💬 Bantuan & FAQ</h1>
+        <p class="faq-subtitle">
+          Temukan jawaban atas pertanyaan seputar aplikasi ini.
+        </p>
+
+        <div class="faq-card">
+          <h2><i class="fa-solid fa-circle-question"></i> a. Halaman ini digunakan untuk apa?</h2>
+          <p>
+            Halaman <strong>Bantuan</strong> ini berfungsi untuk memberikan panduan singkat kepada pengguna,
+            menjelaskan fungsi aplikasi serta teknologi yang digunakan agar lebih mudah dipahami.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h2><i class="fa-solid fa-code-branch"></i> b. Apa itu API?</h2>
+          <p>
+            <strong>API (Application Programming Interface)</strong> adalah perantara yang memungkinkan dua sistem
+            atau aplikasi berinteraksi dan saling bertukar data. API bekerja seperti jembatan yang menghubungkan
+            antara client dan server.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h2><i class="fa-solid fa-server"></i> c. API apa yang digunakan dalam aplikasi ini?</h2>
+          <p>
+            Aplikasi ini menggunakan <strong>RESTful API</strong> berbasis <b>Node.js</b> dan <b>Express.js</b>.
+            API ini mengirim dan menerima data dalam format <code>JSON</code> dengan metode HTTP seperti
+            <code>GET</code>, <code>POST</code>, <code>PUT</code>, dan <code>DELETE</code>.
+          </p>
+        </div>
+
+        <div class="faq-card">
+          <h2><i class="fa-solid fa-network-wired"></i> d. Salah satu pola arsitektur API adalah RESTful</h2>
+          <p>
+            <strong>RESTful API</strong> adalah pola arsitektur yang mengandalkan protokol HTTP untuk komunikasi
+            client-server. Tiap resource memiliki URL unik, dan komunikasi bersifat stateless, artinya setiap
+            permintaan berdiri sendiri.
+          </p>
+          <ul class="api-points">
+            <li><b>Stateless:</b> Server tidak menyimpan status pengguna.</li>
+            <li><b>Client-Server:</b> Pemisahan antara tampilan dan logika backend.</li>
+            <li><b>JSON Format:</b> Data ringan, cepat, dan mudah dipahami.</li>
+          </ul>
+
+          <div class="diagram-box">
+            <img src="/img/restapi.jpg" alt="Diagram RESTful API" class="diagram" />
+            <p class="diagram-caption">Gambar: Ilustrasi Arsitektur RESTful API</p>
+            <p class="diagram-caption">Sumber: “REST API Basics - 4 Things You Need to Know.” Howie Mann - Startup Strategy, mannhowie.com/rest-api.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {{>footer}}
+  </body>
+</html>
